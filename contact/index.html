@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact | Task Manager Pro</title>
+    <meta name="description" content="Get in touch with the Task Manager Pro team.">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../tasks/index.html">Tasks</a>
+            <a href="../about/index.html">About</a>
+            <a href="../custom/index.html">More</a>
+        </nav>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <h1>Contact Us</h1>
+        <form id="form">
+            <label for="name">Name:</label><br/>
+            <input type="text" id="name" name="name" required><br/><br/>
+
+            <label for="email">Email:</label><br/>
+            <input type="email" id="email" name="email" required><br/><br/>
+
+            <label for="subject">Subject:</label><br/>
+            <input type="text" id="subject" name="subject" required><br/><br/>
+
+            <label for="message">Message:</label><br/>
+            <textarea id="message" name="message" rows="4" required></textarea><br/><br/>
+
+            <button type="submit">Submit</button>
+        </form>
+        <!-- This is where the submitted info will pop up using jQuery later -->
+        <div id="popup-message">
+            <!-- Placeholder for popup output -->
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="map">
+        <h2>Our Location</h2>
+        <!-- Google Maps embed will go here -->
+        <p>[Google Maps embed placeholder]</p>
+    </section>
+
+    <!-- Social Media Links -->
+    <section id="social-media">
+        <h2>Follow Us</h2>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Task Manager Pro. All rights reserved.</p>
+        <p>Email us: <a href="mailto:contact@taskmanager.com">contact@taskmanager.com</a></p>
+    </footer>
+
+</body>
+</html>
