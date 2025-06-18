@@ -99,10 +99,16 @@ a:hover {
 
 /* Footer */
 footer {
-  background-color: var(--card-bg);
+  background-color: rgba(0, 0, 0, 0.05);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Logo Toggle */
@@ -188,4 +194,35 @@ footer {
 .toggle-container {
   transform: scale(0.6);
   transform-origin: center right; /* Adjust as needed */
+}
+
+/* Team Member Hover */
+.team-member-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* Carousel Styles */
+.carousel-item blockquote footer.blockquote-footer {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.8;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+  background: transparent;
+  border: none;
+}
+/* Carousel Arrows */
+[data-theme="light"] .carousel-control-prev-icon,
+[data-theme="light"] .carousel-control-next-icon {
+  filter: invert(1);
+}
+[data-theme="dark"] .text-muted {
+  color: rgba(120, 120, 120, 0.616) !important;
 }

@@ -18,23 +18,15 @@
         <img src="../assets/images/white_logo.png" alt="Tasque logo" class="logo-dark" height="40">
         <span class="ms-2"></span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tasks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
         <div class="toggle-container">
           <label class="switch-label">
@@ -51,16 +43,46 @@
     <section class="text-center mb-5" id="team">
       <h1 class="mb-4">Meet the Team</h1>
       <div class="row justify-content-center">
-        <article class="col-sm-6 col-md-4 mb-4">
-          <img src="../assets/images/person1.png" alt="Alex Doe" class="img-fluid rounded-circle mb-3" width="140" />
-          <h5>Alex Doe</h5>
-          <p class="text-muted">Lead Developer</p>
-        </article>
-        <article class="col-sm-6 col-md-4 mb-4">
-          <img src="../assets/images/person2.png" alt="Jamie Smith" class="img-fluid rounded-circle mb-3" width="140" />
-          <h5>Jamie Smith</h5>
-          <p class="text-muted">Product Designer</p>
-        </article>
+        <div class="col-sm-6 col-md-4 mb-4">
+            <article class="text-center" data-bs-toggle="collapse" data-bs-target="#bioAlex" style="cursor: pointer;">
+              <img src="../assets/images/person1.png" alt="Alex Doe" class="img-fluid rounded-circle mb-3 border border-warning border-3 team-member-hover" width="140" />
+              <h5>Alex Doe <span class="badge bg-warning text-dark">Featured</span></h5>
+              <p class="text-muted">Lead Developer</p>
+            </article>
+            <div id="bioAlex" class="collapse">
+              <p class="text-center text-muted">Alex specializes in backend architecture and security protocols.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <article class="text-center" data-bs-toggle="collapse" data-bs-target="#bioJamie" style="cursor: pointer;">
+              <img src="../assets/images/person4.png" alt="Jamie Smith" class="img-fluid rounded-circle mb-3 team-member-hover" width="140" />
+              <h5>Jamie Smith</h5>
+              <p class="text-muted">Product Designer</p>
+            </article>
+            <div id="bioJamie" class="collapse">
+              <p class="text-center text-muted">Jamie focuses on clean UI and accessible UX workflows.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <article class="text-center" data-bs-toggle="collapse" data-bs-target="#bioTaylor" style="cursor: pointer;">
+              <img src="../assets/images/person3.png" alt="Taylor Brooks" class="img-fluid rounded-circle mb-3 team-member-hover" width="140" />
+              <h5>Taylor Brooks</h5>
+              <p class="text-muted">UX Researcher</p>
+            </article>
+            <div id="bioTaylor" class="collapse">
+              <p class="text-center text-muted">Taylor gathers user feedback and turns it into meaningful insights.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mb-4">
+            <article class="text-center" data-bs-toggle="collapse" data-bs-target="#bioElena" style="cursor: pointer;">
+              <img src="../assets/images/person2.png" alt="Dr. Elena Park" class="img-fluid rounded-circle mb-3 border border-primary border-3 team-member-hover" width="140" />
+              <h5>Dr. Elena Park</h5>
+              <p class="text-primary fw-bold">Honorary Advisor</p>
+            </article>
+            <div id="bioElena" class="collapse">
+              <p class="text-center text-muted">Dr. Park offers strategic guidance based on her academic research in HCI.</p>
+            </div>
+          </div>
       </div>
     </section>
 
@@ -73,18 +95,39 @@
               <p>"Tasque streamlined my entire workflow!"</p>
               <footer class="blockquote-footer">Jordan W.</footer>
             </blockquote>
+            <div class="mt-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
           </div>
           <div class="carousel-item">
             <blockquote class="blockquote">
               <p>"Minimalist design, maximum productivity."</p>
               <footer class="blockquote-footer">Dana C.</footer>
             </blockquote>
+            <div class="mt-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+            </div>
           </div>
           <div class="carousel-item">
             <blockquote class="blockquote">
               <p>"Finally a task app I actually use daily."</p>
               <footer class="blockquote-footer">Liam F.</footer>
             </blockquote>
+            <div class="mt-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
