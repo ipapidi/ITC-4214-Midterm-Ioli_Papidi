@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Tasque</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+      <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/black_logo.png" alt="Tasque logo" class="logo-light" height="40">
+        <img src="../assets/images/white_logo.png" alt="Tasque logo" class="logo-dark" height="40">
+        <span class="ms-2"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+        </ul>
+        <div class="toggle-container">
+          <label class="switch-label">
+            <input id="darkModeToggle" class="checkbox" type="checkbox" role="switch" aria-label="Dark Mode" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <section id="contact-heading">
+    <h1>Contact Tasque</h1>
+    <p>We’d love to hear from you. Fill out the form, drop by our office, or reach out via social media.</p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact-form-section">
+    <h2>Send Us a Message</h2>
+    <form id="contact-form" aria-label="Contact form">
+      <div class="form-field">
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true" /><br /><br />
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email Address:</label><br />
+        <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" /><br /><br />
+      </div>
+
+      <div class="form-field">
+        <label for="subject">Subject:</label><br />
+        <input type="text" id="subject" name="subject" placeholder="Subject" required aria-required="true" /><br /><br />
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required aria-required="true"></textarea><br /><br />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Placeholder for jQuery popup -->
+    <div id="popup-confirmation" aria-live="polite">
+      <!-- Submitted form details will appear here with jQuery -->
+    </div>
+  </section>
+
+  <!-- Google Maps Section -->
+  <section id="office-map">
+    <h2>Visit Our Office</h2>
+    <p>We're located at Turn 15, Autódromo José Carlos Pace.</p>
+    <iframe 
+      title="Office Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4695428373694!2d-46.70129708469946!3d-23.70100487226086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce51c4571245cd%3A0xc54730e69d8d82f9!2sAut%C3%B3dromo%20Jos%C3%A9%20Carlos%20Pace!5e0!3m2!1sen!2sbr!4v1717480506329!5m2!1sen!2sbr"
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start py-4">
+    <div class="container">
+      <p>Create, organize, and track your tasks with ease.</p>
+      <p>Contact us: <a href="mailto:support@tasque.com">support@tasque.com</a></p>
+    </div>
+    <div class="text-center py-2">© 2025 Tasque</div>
+  </footer>
+
+</body>
+</html>
