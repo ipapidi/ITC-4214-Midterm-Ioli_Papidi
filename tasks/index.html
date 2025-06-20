@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tasks - Tasque</title>
+  <!-- Custom JS for theme - MUST be first -->
+  <script src="../assets/js/main.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="../assets/js/tasks.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/black_logo.png" alt="Tasque logo" class="logo-light" height="40">
+        <img src="../assets/images/white_logo.png" alt="Tasque logo" class="logo-dark" height="40">
+        <span class="ms-2"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about/index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact/index.html">Contact</a></li>
+        </ul>
+        <div class="toggle-container">
+          <label class="switch-label">
+            <input id="darkModeToggle" class="checkbox" type="checkbox" role="switch" aria-label="Dark Mode" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row mb-4 align-items-center">
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bold">My Tasks</h1>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex justify-content-md-end gap-2" id="task-controls">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="filter-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-filter me-2"></i>Filter Tasks
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filter-dropdown">
+              <li><h6 class="dropdown-header">Filter by Status</h6></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="all">Show All</a></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="completed">Completed</a></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="in-progress">In Progress</a></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="todo">To Do</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Filter by Priority</h6></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="high">High</a></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="medium">Medium</a></li>
+              <li><a class="dropdown-item filter-option" href="#" data-filter="low">Low</a></li>
+            </ul>
+          </div>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal" id="add-task-btn">
+            <i class="fas fa-plus me-2"></i>Add Task
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="task-list">
+      <!-- These initial tasks are templates. The JS will take over and manage them. -->
+      <div class="task-item-initial" data-priority="high" data-status="completed">
+        <div class="task-details">
+          <h5 class="task-title">Finalize Q3 report</h5>
+          <p class="task-description">Compile sales data and create final presentation slides.</p>
+        </div>
+        <div class="task-actions">
+          <span class="task-status status-completed">Completed</span>
+          <div class="dropdown">
+            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item edit-task" href="#" data-bs-toggle="modal" data-bs-target="#taskModal">Edit</a></li>
+              <li><a class="dropdown-item delete-task" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="task-item-initial" data-priority="medium" data-status="in-progress">
+        <div class="task-details">
+          <h5 class="task-title">Design new homepage mockups</h5>
+          <p class="task-description">Create at least three different design concepts in Figma.</p>
+        </div>
+        <div class="task-actions">
+          <span class="task-status status-in-progress">In Progress</span>
+          <div class="dropdown">
+            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item edit-task" href="#" data-bs-toggle="modal" data-bs-target="#taskModal">Edit</a></li>
+              <li><a class="dropdown-item delete-task" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="task-item-initial" data-priority="low" data-status="todo">
+        <div class="task-details">
+          <h5 class="task-title">Update documentation</h5>
+          <p class="task-description">Add new sections for the latest API endpoints.</p>
+        </div>
+        <div class="task-actions">
+          <span class="task-status status-todo">To Do</span>
+          <div class="dropdown">
+            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item edit-task" href="#" data-bs-toggle="modal" data-bs-target="#taskModal">Edit</a></li>
+              <li><a class="dropdown-item delete-task" href="#">Delete</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add/Edit Task Modal -->
+  <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="taskModalLabel">Add New Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="taskForm">
+            <input type="hidden" id="taskId">
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Task Title</label>
+              <input type="text" class="form-control" id="taskTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="taskPriority" class="form-label">Priority</label>
+              <select class="form-select" id="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="mb-3">
+                <label for="taskStatus" class="form-label">Status</label>
+                <select class="form-select" id="taskStatus">
+                    <option value="todo">To Do</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save Task</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start py-4 mt-auto">
+    <div class="container">
+      <p>Create, organize, and track your tasks with ease.</p>
+      <p>Contact us: <a href="mailto:support@tasque.com">support@tasque.com</a></p>
+    </div>
+    <div class="text-center py-2">© 2025 Tasque</div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
