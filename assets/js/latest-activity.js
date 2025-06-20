@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.innerHTML = `
                     <div class="latest-activity-card-outer">
                       <div class="latest-activity-card">
-                        <div class="latest-activity-title mb-1">High Priority</div>
+                        <div class="latest-activity-title mb-1">${task.title}</div>
                         <div class="latest-activity-desc mb-2">${task.description || ''}</div>
                         <div class="latest-activity-badge-row">
                           <span class="latest-activity-badge mb-2">High Priority</span>

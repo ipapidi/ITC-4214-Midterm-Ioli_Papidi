@@ -921,3 +921,160 @@ body.dark-mode .navbar {
 [data-theme="dark"] .navbar-toggler-icon {
   filter: invert(1) brightness(2);
 }
+
+/* FAQ Page Styles */
+.faq-page h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.faq-search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+#faq-search.form-control {
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-speed) ease;
+}
+#faq-search.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+.accordion-item {
+  background: var(--bg-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 1.2rem;
+  box-shadow: var(--box-shadow);
+  transition: background 0.2s, border-color 0.2s;
+}
+.accordion-item:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.accordion-item:last-child {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.accordion-button {
+  background: var(--bg-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius) !important;
+  transition: background 0.2s, color 0.2s;
+}
+.accordion-item:first-child .accordion-button {
+  border-top-left-radius: var(--border-radius) !important;
+  border-top-right-radius: var(--border-radius) !important;
+}
+.accordion-item:last-child .accordion-button.collapsed {
+  border-bottom-left-radius: var(--border-radius) !important;
+  border-bottom-right-radius: var(--border-radius) !important;
+}
+.accordion-button:not(.collapsed) {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.accordion-collapse:not(.show) {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.accordion-body {
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Contact form tweaks for FAQ */
+.faq-page .card {
+  background: var(--bg-color);
+  border: 1.5px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+.faq-page .form-label {
+  color: var(--text-color);
+}
+.faq-page .form-control {
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: 1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+.faq-page .form-control:focus {
+  border-color: var(--primary-color);
+  background: var(--bg-color);
+}
+.faq-page .btn {
+  border-radius: 1rem;
+}
+
+/* Dark mode for FAQ page */
+[data-theme="dark"] .accordion-item {
+  background: #23272b;
+  border-color: #3a3a3a;
+}
+[data-theme="dark"] .accordion-button {
+  background: #23272b;
+  color: #66b2ff;
+}
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background: #338fff;
+  color: #fff;
+}
+[data-theme="dark"] .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e1e1e1'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+[data-theme="dark"] .accordion-body {
+  background: #23272b;
+  color: #e1e1e1;
+}
+[data-theme="dark"] #faq-search.form-control {
+  background: #23272b;
+  color: #e1e1e1;
+  border-color: #3a3a3a;
+}
+[data-theme="dark"] #faq-search.form-control::placeholder {
+  color: #e1e1e1;
+  opacity: 0.7;
+}
+[data-theme="dark"] .faq-page .card {
+  background: #23272b;
+  border-color: #3a3a3a;
+}
+[data-theme="dark"] .faq-page .form-label {
+  color: #e1e1e1;
+}
+[data-theme="dark"] .faq-page .form-control {
+  background: #23272b;
+  color: #e1e1e1;
+  border-color: #3a3a3a;
+}
+[data-theme="dark"] .faq-page .form-control:focus {
+  border-color: #338fff;
+  background: #23272b;
+}
+[data-theme="dark"] .faq-page .form-control::placeholder {
+  color: #adb5bd;
+  opacity: 0.7;
+}
+[data-theme="dark"] .search-icon {
+  color: #e1e1e1;
+}
