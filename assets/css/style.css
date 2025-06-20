@@ -917,3 +917,7 @@ body.dark-mode .navbar {
   display: block;
   margin-bottom: 2rem;
 }
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}
