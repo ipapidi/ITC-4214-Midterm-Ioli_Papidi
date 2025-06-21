@@ -25,8 +25,9 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* A lighter grey for better contrast in dark mode */
 [data-theme="dark"] .text-muted {
-  color: #adb5bd !important; /* A lighter grey for better contrast in dark mode */
+  color: #adb5bd !important;
 }
 
 /* Global Styles */
@@ -41,7 +42,7 @@ body {
 .section-spacing {
   padding: var(--section-spacing) 0;
 }
-
+/* Media Queries */
 @media (max-width: 768px) {
   :root {
     --section-spacing: 3rem;
@@ -53,7 +54,7 @@ body {
   }
   .task-actions {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-between; 
     margin-left: 0;
   }
 }
@@ -130,7 +131,7 @@ a:hover {
   color: var(--primary-color) !important;
 }
 
-/* Dark Mode Toggle */
+/* Dark Mode Toggle from CSS Portal*/
 .toggle-container {
   transform: scale(0.6);
   transform-origin: center right;
@@ -376,7 +377,7 @@ button[type="submit"]:hover {
   margin-right: 1rem;
   transition: color var(--transition-speed) ease;
 }
-
+/* Hover effects for detail-item */
 .detail-item:hover i,
 .detail-item:hover h4,
 .detail-item:hover p,
@@ -839,6 +840,8 @@ body.dark-mode .navbar {
   border: none;
 }
 .latest-activity-btn {
+  background: #0d6efd;
+  color: #fff;
   min-width: unset;
   padding: 0.7em 2.2em;
   font-size: 1.08rem;
@@ -1001,7 +1004,7 @@ body.dark-mode .navbar {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
-/* Contact form tweaks for FAQ */
+/* Contact form for FAQ */
 .faq-page .card {
   background: var(--bg-color);
   border: 1.5px solid var(--border-color);
